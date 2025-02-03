@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eagle Creek Golf Club</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: auto 300px;
+            gap: 20px;
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 5px;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .rating-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stars {
+            color: #4CAF50;
+            font-size: 14px;
+        }
+
+        .rating {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .reviews {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .tee-times {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .main-image {
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .side-images {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .side-image {
+            height: 195px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .view-photos {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .description {
+            color: #666;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .info-box {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+        }
+
+        .more-highlights {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .booking-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .stay-card,
+        .play-card {
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .stay-card {
+            background: #f8fdff;
+        }
+
+        .play-card {
+            background: #f0f7f0;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card-header h2 {
+            color: #00BCD4;
+            font-size: 24px;
+        }
+
+        .play-card .card-header h2 {
+            color: #4CAF50;
+        }
+
+        .card-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .price-info {
+            text-align: center;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .price-label {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .book-button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .stay-button {
+            background: #00BCD4;
+        }
+
+        .play-button {
+            background: #4CAF50;
+        }
+
+        @media (max-width: 991px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .side-images {
+                display: none;
+            }
+
+            .main-image {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="#">Golf Course</a> &gt;
+            <a href="#">Florida</a> &gt;
+            <a href="#">Orlando</a> &gt;
+            <span>Eagle Creek Golf Club</span>
+        </div>
+
+        <h1 class="title">Eagle Creek Golf Club, Stay and Play</h1>
+
+        <div class="rating-container">
+            <div class="stars">★★★★☆</div>
+            <span class="rating">9.0</span>
+            <span class="reviews">(3 REVIEWS)</span>
+            <div class="tee-times">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                </svg>
+                TEE TIMES DAILY 7 AM - 6 PM
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="main-content">
+                <div class="gallery">
+                    <div class="main-image">
+                        <img src="main-golf-image.jpg" alt="Golf Course Main View">
+                        <button class="view-photos">VIEW ALL 50 IMAGES</button>
+                    </div>
+                    <div class="side-images">
+                        <div class="side-image">
+                            <img src="side-image-1.jpg" alt="Golf Course View 1">
+                        </div>
+                        <div class="side-image">
+                            <img src="side-image-2.jpg" alt="Golf Course View 2">
+                        </div>
+                    </div>
+                </div>
+
+                <p class="description">
+                    Eagle Creek Golf Club combines scenic views with a championship-level course that offers a memorable
+                    golfing experience. Nestled amidst lush landscapes and serene water features, this course is known
+                    for its challenging design and exceptional playing conditions, making it a must-play destination for
+                    golf enthusiasts.
+                </p>
+
+                <div class="info-box">
+                    <div class="info-item">
+                        <span>⛳</span>
+                        PAR: 72
+                    </div>
+                    <div class="info-item">
+                        <span>📏</span>
+                        TOTAL YARDS: 7305
+                    </div>
+                    <div class="info-item">
+                        <span>🏌️</span>
+                        PUBLIC COURSE
+                    </div>
+                    <button class="more-highlights">MORE COURSE HIGHLIGHTS</button>
+                </div>
+            </div>
+
+            <div class="booking-cards">
+                <div class="stay-card">
+                    <div class="card-header">
+                        <span>🏨</span>
+                        <h2>STAY</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="price-info">
+                            <div class="price">800+</div>
+                            <div class="price-label">PLACES TO STAY NEARBY</div>
+                        </div>
+                        <div class="price-info">
+                            <div class="price-label">FROM</div>
+                            <div class="price">$300</div>
+                        </div>
+                    </div>
+                    <button class="book-button stay-button">BOOK A PLACE TO STAY</button>
+                </div>
+
+                <div class="play-card">
+                    <div class="card-header">
+                        <span>⛳</span>
+                        <h2>PLAY</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="price-info">
+                            <div class="price-label">PEAK</div>
+                            <div class="price">$100</div>
+                            <div class="price-label">ROUND</div>
+                        </div>
+                        <div class="price-info">
+                            <div class="price-label">OFF-PEAK</div>
+                            <div class="price">$75</div>
+                            <div class="price-label">ROUND</div>
+                        </div>
+                        <div class="price-info">
+                            <div class="price-label">TWILIGHT</div>
+                            <div class="price">$60</div>
+                            <div class="price-label">ROUND</div>
+                        </div>
+                    </div>
+                    <button class="book-button play-button">BOOK A TEE TIME</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listing</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/media.css">
+    <link rel="stylesheet" href="/CSS/calender.css">
+    
+    <!-- Hotel Date Picker Calendar-->
+    <link href="https://cdn.jsdelivr.net/npm/hotel-datepicker@4.11.2/dist/css/hotel-datepicker.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="date-inputs">
+        <div class="form-group">
+            <label class="input-label">CHECK-IN</label>
+            <input type="text" id="check-in" readonly>
+            
+        </div>
+        <div class="form-group">
+            <label class="input-label">CHECK-OUT</label>
+            <input type="text" id="check-out" readonly>
+            
+        </div>
+    </div>
+    <!-- Calendar -->
+    <div class="calendar" id="modal-calendar" style="display: none;">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                
+                <div class="modal-close-btn" id="js-calendar-close">
+                    <i class="fa fa-times"></i>
+                </div>
+            </div>
+            <!-- Calendar Container -->
+            <div class="modal-body">
+                <input id="input-id" type="text" class="input-calendar" value="" />
+                <div id="calendar-container"></div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-md-5">
+                        <button id="night-btn" class="continue-btn">
+                            <span>Continue</span>
+                            <span id="night" class="night-text">1 Night</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/fecha@4.2.3/lib/fecha.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hotel-datepicker@4.11.2/dist/js/hotel-datepicker.min.js"></script>
+    <script src="JS/modal.js"></script>
+</body>
+
+</html>

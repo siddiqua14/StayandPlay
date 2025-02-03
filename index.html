@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay&Play</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link rel="stylesheet" href="/CSS/media.css">
+    <link rel="stylesheet" href="/CSS/calender.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Hotel Date Picker Calendar-->
+    <link href="https://cdn.jsdelivr.net/npm/hotel-datepicker@4.11.2/dist/css/hotel-datepicker.min.css"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <!-- Full-screen logo -->
+            <div class="logo-fullscreen" style="display: inline-flex; align-items: center; gap: 8px;">
+                <img src="/img/Final.png" alt="" srcset="">
+            </div>
+            <!-- Smaller screen logo -->
+            <!-- <div class="logo-responsive">
+                <img src="/img/Final.png" alt="" srcset="">
+            </div> -->
+        </div>
+
+        <div class="top-nav">
+            <a href="#">Home</a>
+            <a href="#">Where to Stay</a>
+            <a href="#">Group Travel</a>
+            <button type="book" class="booking-btn">BOOK A TEE TIME</button>
+            <div class="search">
+                <input type="text" placeholder="Search" class="search-input" readonly>
+                <div class="search-icon-wrapper" onclick="highlightSelectWrapper()">
+                    <i class="uil uil-search search-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="logo">
+                <div class="logo-booking" style="display: inline-flex; align-items: center;">
+                    <img src="/img/Layer_1.png" alt="" srcset="">
+                </div>
+
+                <div class="search-box">
+                    <input type="text" placeholder="Search" class="search-input" readonly>
+                    <div class="search-icon-wrapper" onclick="highlightSelectWrapper()">
+                        <i class="uil uil-search search-icon"></i>
+                    </div>
+                </div>
+                <div class="mobile-icons">
+                    <div class="mobile-search-icon-wrapper" id="mobileSearchIcon">
+                        <i class="uil uil-search search-icon"></i>
+                    </div>
+                    <i class="uil uil-bars navOpenBtn"></i>
+                </div>
+
+                <div class="nav-links">
+                    <i class="uil uil-times navCloseBtn"></i>
+                    <a href="#">Blog Home</a>
+                    <a href="#">Categories</a>
+                    <a href="#">Archives</a>
+                </div>
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="breadcrumb">
+            <a href="#">Tamarindo Rentals</a>
+            <a href="/all/costa-rica">Costa Rica</a>
+            <a href="/all/costa-rica/guanacaste">Guanacaste</a>
+            <span>Tamarindo</span>
+        </div>
+        <div>
+            <h1>Eagle Creek Golf Club, Stay and Play</h1>
+            <div class="rating">
+                <div class="stars">★★★★☆<span>9.0 (3 REVIEWS)</span></div>
+
+                <div class="time">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                    TEE TIMES DAILY 7 AM - 6 PM
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="main-content">
+                <div class="gallery">
+                    <div class="main-image image-container">
+                        <img src="./img/hotel.jpg" alt="Lakefront view with deck and red chair">
+                        <div class="more-photos mobile-more">
+                            <i class="fa-regular fa-images"></i> 30+
+                        </div>
+                        <div class="dots-indicator"></div> <!-- 3 dots indicator -->
+                    </div>
+
+                    <div class="thumbnail-column">
+                        <div class="thumbnail image-container">
+                            <img src="./img/hotel1.png" alt="Cottage exterior">
+                        </div>
+                        <div class="thumbnail image-container">
+                            <img src="./img/hotel2.png" alt="Kitchen view">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" id="gallery-modal">
+
+                    <span class="close">&times;</span>
+                    <div class="modal-content">
+                        <img id="modal-img" src="img/hotel.jpg" alt="Gallery image">
+                        <button class="nav-btn prev">&#10094;</button>
+                        <button class="nav-btn next">&#10095;</button>
+                        <div class="gallery-info">
+                            <div class="image-title">Beautiful beachfront view</div>
+                            <div class="image-count">1/31</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <!-- Stay Section -->
+                    <div class="section">
+                        <div class="top">
+                            <div class="card-icon stay-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path
+                                        d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z" />
+                                </svg>
+                            </div>
+                            <h2 class="title stay-title">STAY</h2>
+                        </div>
+                        <div class="info-container">
+                            <div class="info-row">
+                                <div class="info-section">
+                                    <div class="places">800+</div>
+                                    <div class="subtitle">PLACES TO<br>STAY NEAR BY</div>
+                                </div>
+                                <div class="vertical-line"></div>
+                                <div class="info-section">
+                                    <div class="subtitle">FROM</div>
+                                    <div class="price">$300</div>
+                                </div>
+                            </div>
+                            <button class="button stay-button">BOOK A PLACE TO STAY</button>
+                        </div>
+
+                    </div>
+
+                    <!-- Play Section -->
+                    <div class="section">
+                        <div class="top">
+                            <div class="card-icon play-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                                </svg>
+                            </div>
+                            <h2 class="title play-title">PLAY</h2>
+                        </div>
+                        <div class="info-container">
+                            <div class="rates-container">
+                                <div class="info-section">
+                                    <div class="subtitle">PEAK</div>
+                                    <div class="price">$100</div>
+                                    <div class="subtitle">ROUND</div>
+                                </div>
+                                <div class="vertical-line"></div>
+                                <div class="info-section">
+                                    <div class="subtitle">OFF-PEAK</div>
+                                    <div class="price">$75</div>
+                                    <div class="subtitle">ROUND</div>
+                                </div>
+                                <div class="vertical-line"></div>
+                                <div class="info-section">
+                                    <div class="subtitle">TWILIGHT</div>
+                                    <div class="price">$60</div>
+                                    <div class="subtitle">ROUND</div>
+                                </div>
+                            </div>
+                            <button class="button play-button">BOOK A TEE TIME</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                
+
+                <div class="course">
+                    <div class="course-container">
+                        <div class="course-description">
+                            Eagle Creek Golf Club combines scenic views with a championship-level course that offers a
+                            memorable
+                            golfing experience. Nestled amidst lush landscapes and serene water features, this course is
+                            known for
+                            its challenging design and exceptional playing conditions, making it a must-play destination
+                            for golf
+                            enthusiasts.
+                        </div>
+
+                        <div class="course-overview">
+                            <div class="course-wrapper">
+                                <div class="overview-container">
+                                    <div class="course-title"> <h2 class="course-title">
+                                        EAGLE CREEK GOLF CLUB AT A GLANCE
+                                    </h2></div>
+                                    <!-- <h2 class="course-title">
+                                        EAGLE CREEK GOLF CLUB AT A GLANCE
+                                    </h2> -->
+                                    <div class="stats-info">
+                                        <div class="stat-item">
+                                            <img class="stat-icon" src="/api/placeholder/24/24" alt="Par icon">
+                                            <span>PAR: 72</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <img class="stat-icon" src="/api/placeholder/24/24" alt="Yardage icon">
+                                            <span>TOTAL YARDS: 7305</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <img class="stat-icon" src="/api/placeholder/24/24" alt="Access icon">
+                                            <span>PUBLIC COURSE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-container">
+                                    <button class="more-info-button">MORE COURSE HIGHLIGHTS</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="tiles-container">
+                    <h1>Find the Perfect Stay Near Eagle Creek Golf Club in Orlando, FL</h1>
+            
+                    <div class="filters">
+                        <button class="filter-btn">STAY WITHIN 10 MILES <span>▼</span></button>
+                        <button class="filter-btn">PROPERTY TYPE <span>▼</span></button>
+                        <button class="filter-btn">2 BEDROOM <span>▼</span></button>
+                        <button class="filter-btn">MOST POPULAR <span>▼</span></button>
+                    </div>
+            
+                    <div class="flex-container">
+                        <div class="property-grid">
+                            <!-- First Row -->
+                            <div class="property-card">
+                                <div class="property-image">
+                                    <div class="image-slider">
+                                        <button class="navbtn left">&#10094;</button>
+                                        <button class="navbtn right">&#10095;</button>
+                                        <div class="action-buttons">
+                                            <div class="action-button" title="View"><i class="fa fa-eye"></i></div>
+                                            <div class="action-button" title="Location"><i class="fa fa-map-marker"></i></div>
+                                            <div class="action-button" title="Save"><i class="fa fa-heart-o"></i></div>
+                                        </div>
+                                        <div class="slider-images">
+                                            <img src="/img/1.webp" alt="Property Image 1">
+                                            <img src="/img/hero.jpg" alt="Property Image 2">
+                                            <img src="/img/images.jpeg" alt="Property Image 3">
+                                            <img src="/img/hero.jpg" alt="Property Image 4">
+                                        </div>
+                                        <div class="slider-dots">
+                                            <span class="dot active"></span>
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                            <span class="dot"></span>
+                                        </div>
+                                        <div class="price-tag">From $295<span class="price-info">i</span></div>
+                                    </div>
+                                    <div class="action-buttons">
+                                        <div class="action-button">♡</div>
+                                        <div class="action-button">⋮</div>
+                                    </div>
+                                </div>
+                                <div class="property-content">
+                                    <div class="rating">
+                                        <div class="rating-badge">
+                                            <span class="star-icon">★</span>
+                                            <span class="text">10.0 Exceptional</span>
+                                        </div>
+                                        <span class="reviews">12 Reviews</span>
+                                    </div>
+                        
+                                    <h3 class="title">Lorem ipsum odor amean consecetue adipiscing elit amoae emor eros monm attis loremon
+                                        primis.</h3>
+                        
+                                    <div class="booking-info">Booking.com</div>
+                                    <div class="price">From $295<span class="price-info">i</span></div>
+                        
+                                    <div class="amenities">
+                                        <span>Air Conditioner</span>•
+                                        <span>Parking</span>•
+                                        <span>Pet-Friendly</span>•
+                                        <span>Sleeps 8</span>
+                                    </div>
+                        
+                                    <div class="location">Vancouver > Oakridge</div>
+                        
+                                    <div class="button-container">
+                                        <button class="button secondary-button">LEARN MORE</button>
+                                        <button class="button primary-button">SEE DATES</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="property-card">
+                                <div class="property-image">
+                                    <img src="https://via.placeholder.com/300x200" alt="Property">
+                                    <div class="action-buttons">
+                                        <div class="action-button">♡</div>
+                                        <div class="action-button">⋮</div>
+                                    </div>
+                                </div>
+                                <div class="property-content">
+                                    <div class="rating">
+                                        <span class="rating-score">10/0 Exceptional</span>
+                                        <span class="reviews">12 Reviews</span>
+                                    </div>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    <p class="price">From <span>$295</span></p>
+                                    <div class="amenities">
+                                        <span>Air Conditioned</span>
+                                        <span>•</span>
+                                        <span>Parking</span>
+                                        <span>•</span>
+                                        <span>Pet Friendly</span>
+                                    </div>
+                                    <div class="buttons">
+                                        <button class="button learn-more">LEARN MORE</button>
+                                        <button class="button see-dates">SEE DATES</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="property-card">
+                                <div class="property-image">
+                                    <img src="https://via.placeholder.com/300x200" alt="Property">
+                                    <div class="action-buttons">
+                                        <div class="action-button">♡</div>
+                                        <div class="action-button">⋮</div>
+                                    </div>
+                                </div>
+                                <div class="property-content">
+                                    <div class="rating">
+                                        <span class="rating-score">10/0 Exceptional</span>
+                                        <span class="reviews">12 Reviews</span>
+                                    </div>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    <p class="price">From <span>$295</span></p>
+                                    <div class="amenities">
+                                        <span>Air Conditioned</span>
+                                        <span>•</span>
+                                        <span>Parking</span>
+                                        <span>•</span>
+                                        <span>Pet Friendly</span>
+                                    </div>
+                                    <div class="buttons">
+                                        <button class="button learn-more">LEARN MORE</button>
+                                        <button class="button see-dates">SEE DATES</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="property-card">
+                                <div class="property-image">
+                                    <img src="https://via.placeholder.com/300x200" alt="Property">
+                                    <div class="action-buttons">
+                                        <div class="action-button">♡</div>
+                                        <div class="action-button">⋮</div>
+                                    </div>
+                                </div>
+                                <div class="property-content">
+                                    <div class="rating">
+                                        <span class="rating-score">10/0 Exceptional</span>
+                                        <span class="reviews">12 Reviews</span>
+                                    </div>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    <p class="price">From <span>$295</span></p>
+                                    <div class="amenities">
+                                        <span>Air Conditioned</span>
+                                        <span>•</span>
+                                        <span>Parking</span>
+                                        <span>•</span>
+                                        <span>Pet Friendly</span>
+                                    </div>
+                                    <div class="buttons">
+                                        <button class="button learn-more">LEARN MORE</button>
+                                        <button class="button see-dates">SEE DATES</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="property-card">
+                                <div class="property-image">
+                                    <img src="https://via.placeholder.com/300x200" alt="Property">
+                                    <div class="action-buttons">
+                                        <div class="action-button">♡</div>
+                                        <div class="action-button">⋮</div>
+                                    </div>
+                                </div>
+                                <div class="property-content">
+                                    <div class="rating">
+                                        <span class="rating-score">10/0 Exceptional</span>
+                                        <span class="reviews">12 Reviews</span>
+                                    </div>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    <p class="price">From <span>$295</span></p>
+                                    <div class="amenities">
+                                        <span>Air Conditioned</span>
+                                        <span>•</span>
+                                        <span>Parking</span>
+                                        <span>•</span>
+                                        <span>Pet Friendly</span>
+                                    </div>
+                                    <div class="buttons">
+                                        <button class="button learn-more">LEARN MORE</button>
+                                        <button class="button see-dates">SEE DATES</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="property-card">
+                                <div class="property-image">
+                                    <img src="https://via.placeholder.com/300x200" alt="Property">
+                                    <div class="action-buttons">
+                                        <div class="action-button">♡</div>
+                                        <div class="action-button">⋮</div>
+                                    </div>
+                                </div>
+                                <div class="property-content">
+                                    <div class="rating">
+                                        <span class="rating-score">10/0 Exceptional</span>
+                                        <span class="reviews">12 Reviews</span>
+                                    </div>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    <p class="price">From <span>$295</span></p>
+                                    <div class="amenities">
+                                        <span>Air Conditioned</span>
+                                        <span>•</span>
+                                        <span>Parking</span>
+                                        <span>•</span>
+                                        <span>Pet Friendly</span>
+                                    </div>
+                                    <div class="buttons">
+                                        <button class="button learn-more">LEARN MORE</button>
+                                        <button class="button see-dates">SEE DATES</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="property-card">
+                                <div class="property-image">
+                                    <img src="https://via.placeholder.com/300x200" alt="Property">
+                                    <div class="action-buttons">
+                                        <div class="action-button">♡</div>
+                                        <div class="action-button">⋮</div>
+                                    </div>
+                                </div>
+                                <div class="property-content">
+                                    <div class="rating">
+                                        <span class="rating-score">10/0 Exceptional</span>
+                                        <span class="reviews">12 Reviews</span>
+                                    </div>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    <p class="price">From <span>$295</span></p>
+                                    <div class="amenities">
+                                        <span>Air Conditioned</span>
+                                        <span>•</span>
+                                        <span>Parking</span>
+                                        <span>•</span>
+                                        <span>Pet Friendly</span>
+                                    </div>
+                                    <div class="buttons">
+                                        <button class="button learn-more">LEARN MORE</button>
+                                        <button class="button see-dates">SEE DATES</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="property-card">
+                                <div class="property-image">
+                                    <img src="https://via.placeholder.com/300x200" alt="Property">
+                                    <div class="action-buttons">
+                                        <div class="action-button">♡</div>
+                                        <div class="action-button">⋮</div>
+                                    </div>
+                                </div>
+                                <div class="property-content">
+                                    <div class="rating">
+                                        <span class="rating-score">10/0 Exceptional</span>
+                                        <span class="reviews">12 Reviews</span>
+                                    </div>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    <p class="price">From <span>$295</span></p>
+                                    <div class="amenities">
+                                        <span>Air Conditioned</span>
+                                        <span>•</span>
+                                        <span>Parking</span>
+                                        <span>•</span>
+                                        <span>Pet Friendly</span>
+                                    </div>
+                                    <div class="buttons">
+                                        <button class="button learn-more">LEARN MORE</button>
+                                        <button class="button see-dates">SEE DATES</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="property-card">
+                                <div class="property-image">
+                                    <img src="https://via.placeholder.com/300x200" alt="Property">
+                                    <div class="action-buttons">
+                                        <div class="action-button">♡</div>
+                                        <div class="action-button">⋮</div>
+                                    </div>
+                                </div>
+                                <div class="property-content">
+                                    <div class="rating">
+                                        <span class="rating-score">10/0 Exceptional</span>
+                                        <span class="reviews">12 Reviews</span>
+                                    </div>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                    <p class="price">From <span>$295</span></p>
+                                    <div class="amenities">
+                                        <span>Air Conditioned</span>
+                                        <span>•</span>
+                                        <span>Parking</span>
+                                        <span>•</span>
+                                        <span>Pet Friendly</span>
+                                    </div>
+                                    <div class="buttons">
+                                        <button class="button learn-more">LEARN MORE</button>
+                                        <button class="button see-dates">SEE DATES</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Repeat the property-card div for all properties -->
+                        </div>
+                        
+                        <div class="map-container">
+                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                                src="https://maps.google.com/maps?width=100%&height=100%&hl=en&q=Eagle+Creek+Golf+Club,Orlando,FL&t=&z=13&ie=UTF8&iwloc=B&output=embed">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pagination">
+                            <button class="page-btn">PREVIOUS</button>
+                            <button class="page-btn active">01</button>
+                            <button class="page-btn">02</button>
+                            <button class="page-btn">03</button>
+                            <button class="page-btn">04</button>
+                            <button class="page-btn">05</button>
+                            <span>...</span>
+                            <button class="page-btn">NEXT</button>
+                        </div>
+                        <div class="view-more-container">
+                            <a href="#" class="view-more">VIEW MORE</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="card1">
+                <!-- Stay Section -->
+                <div class="section">
+                    <div class="top">
+                        <div class="card-icon stay-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path
+                                    d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z" />
+                            </svg>
+                        </div>
+                        <h2 class="title stay-title">STAY</h2>
+                    </div>
+                    <div class="info-container">
+                        <div class="info-row">
+                            <div class="info-section">
+                                <div class="places">800+</div>
+                                <div class="subtitle">PLACES TO<br>STAY NEAR BY</div>
+                            </div>
+                            <div class="vertical-line"></div>
+                            <div class="info-section">
+                                <div class="subtitle">FROM</div>
+                                <div class="price">$300</div>
+                            </div>
+                        </div>
+                        <button class="button stay-button">BOOK A PLACE TO STAY</button>
+                    </div>
+
+                </div>
+
+                <!-- Play Section -->
+                <div class="section">
+                    <div class="top">
+                        <div class="card-icon play-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                            </svg>
+                        </div>
+                        <h2 class="title play-title">PLAY</h2>
+                    </div>
+                    <div class="info-container">
+                        <div class="rates-container">
+                            <div class="info-section">
+                                <div class="subtitle">PEAK</div>
+                                <div class="price">$100</div>
+                                <div class="subtitle">ROUND</div>
+                            </div>
+                            <div class="vertical-line"></div>
+                            <div class="info-section">
+                                <div class="subtitle">OFF-PEAK</div>
+                                <div class="price">$75</div>
+                                <div class="subtitle">ROUND</div>
+                            </div>
+                            <div class="vertical-line"></div>
+                            <div class="info-section">
+                                <div class="subtitle">TWILIGHT</div>
+                                <div class="price">$60</div>
+                                <div class="subtitle">ROUND</div>
+                            </div>
+                        </div>
+                        <button class="button play-button">BOOK A TEE TIME</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="/JS/style.js"></script>
+</body>
+
+</html>
